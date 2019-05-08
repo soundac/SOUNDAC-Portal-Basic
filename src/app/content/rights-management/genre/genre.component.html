@@ -1,0 +1,14 @@
+<form name="smartForm" class="smart-form">
+    <mat-form-field class="full-width">
+        <input type="text" placeholder="Genre" matInput [formControl]="smartControl" [matAutocomplete]="auto" matTooltip= {{toolTips.genre}}
+            matTooltipShowDelay= {{toolTips.delay}}>
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option #selectedGenre *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+            </mat-option>
+        </mat-autocomplete>
+        <mat-error *ngIf="smartControl.hasError('validGenre') && smartControl.touched">
+          <strong>Must be a valid genre</strong>
+        </mat-error>
+    </mat-form-field>
+</form>

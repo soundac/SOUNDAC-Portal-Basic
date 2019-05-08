@@ -1,0 +1,19 @@
+.mat-table,
+.mat-paginator {
+    background: transparent;
+
+    mat-header-row {
+        padding: 0;
+        th {
+            flex: 1;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+    }
+
+    .mat-edit-button {
+        min-width: 0;
+    }
+
+
+}
