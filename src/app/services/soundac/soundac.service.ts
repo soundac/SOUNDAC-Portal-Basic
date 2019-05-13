@@ -21,7 +21,8 @@ export class SoundacService {
   ) { }
 
   setWebSocket() {
-    soundac.config.set('websocket', 'wss://node.soundac.io');
+    this.auth.setSocket();
+    // soundac.config.set('websocket', 'wss://node.soundac.io');
     // soundac.config.set('websocket', 'wss://testnet.soundac.io');
   }
 
